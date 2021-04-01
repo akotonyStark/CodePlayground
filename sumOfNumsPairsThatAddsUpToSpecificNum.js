@@ -1,3 +1,4 @@
+/* solution one */
 let array = [1,7,4,4,5,2];
 function one(data){
   let time_start = new Date().getTime();
@@ -12,9 +13,8 @@ function one(data){
   return w;
 }
 console.log(one(array))
- 
-//console.log(w);
- 
+
+/* solution two */ 
 textRun()
 function textRun(){
   let time_start = new Date().getTime();
