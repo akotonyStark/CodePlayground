@@ -60,3 +60,17 @@ for(i=0; i<arr.length; i++){
 }
 let duration = new Date().getTime() - time_start;
 console.log('Processed in: ' + duration + 'ms');
+
+
+/* solution 4 */
+let arr = [1,2,3,5,7]
+
+var head = 0;
+var tail = arr.length - 1;
+for(i = head; i < arr.length; i++){
+  for(j=tail; j>i; --j){
+      if(arr[i] + arr[j] === 8){
+      console.log(arr[i], arr[j])
+      }
+  }
+}
