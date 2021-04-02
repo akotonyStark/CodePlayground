@@ -30,9 +30,9 @@ function textRun(){
      let b = array.indexOf(otherPair);
      let c = array.indexOf(otherPair, a + 1);
      if(a !== b){
-       console.log(a, b)
+       console.log(array[a], array[b])
      }else{
-       console.log(a, c)
+       console.log(array[a], array[c])
      }
    }
  
@@ -42,3 +42,21 @@ let duration = new Date().getTime() - time_start;
 console.log('Processed in: ' + duration + 'ms');
  
 }
+
+
+/* solution 3*/
+let time_start = new Date().getTime();
+let arr = [1,2,6,4]
+
+for(i=0; i<arr.length; i++){
+  for(j=i+1; j<arr.length; j++){
+   
+    let sum = arr[i] + arr[j];
+
+    if(sum === 8){
+      console.log(arr[i], arr[j])
+    }
+  }
+}
+let duration = new Date().getTime() - time_start;
+console.log('Processed in: ' + duration + 'ms');
