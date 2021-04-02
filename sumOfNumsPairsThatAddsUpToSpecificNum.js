@@ -74,3 +74,15 @@ for(i = head; i < arr.length; i++){
       }
   }
 }
+
+
+/* solution 5*/
+let arr = [1,9,-1,2,3,7,5]
+
+var low = 0;
+var high = arr.length - 1;
+while(low < high){
+  if(arr[low] + arr[high] === 8){
+    console.log(arr[low], arr[high])
+  }
+  low++
