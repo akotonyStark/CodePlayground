@@ -1,15 +1,15 @@
 /* solution one */
 let array = [1,7,4,4,5,2];
 function one(data){
-  let time_start = new Date().getTime();
+  //let time_start = new Date().getTime();
   let w = []
   data.forEach(function(numb, index){
     let a = data[index] || '', b = data[index + 1] || '';
     if(a + b === 8)w.push(a, b)
   });
   
-  let duration = new Date().getTime() - time_start;
-  console.log('Processed in: ' + duration + 'ms');
+  //let duration = new Date().getTime() - time_start;
+  //console.log('Processed in: ' + duration + 'ms');
   return w;
 }
 console.log(one(array))
@@ -17,7 +17,7 @@ console.log(one(array))
 /* solution two */ 
 textRun()
 function textRun(){
-  let time_start = new Date().getTime();
+  //let time_start = new Date().getTime();
   let array = [1,7,4,4,5,2]
   console.log(array);
   let temp = []
@@ -38,14 +38,14 @@ function textRun(){
  
 });
  
-let duration = new Date().getTime() - time_start;
-console.log('Processed in: ' + duration + 'ms');
+//let duration = new Date().getTime() - time_start;
+//console.log('Processed in: ' + duration + 'ms');
  
 }
 
 
 /* solution 3*/
-let time_start = new Date().getTime();
+//let time_start = new Date().getTime();
 let arr = [1,2,6,4]
 
 for(i=0; i<arr.length; i++){
@@ -58,8 +58,8 @@ for(i=0; i<arr.length; i++){
     }
   }
 }
-let duration = new Date().getTime() - time_start;
-console.log('Processed in: ' + duration + 'ms');
+//let duration = new Date().getTime() - time_start;
+//console.log('Processed in: ' + duration + 'ms');
 
 
 /* solution 4 */
