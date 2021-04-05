@@ -1,4 +1,8 @@
-/* solution one */
+/* solution one 
+this solution adds the sequential element pairs as you loop through till you get a sum that is 8
+eg. array[0] + array[1]
+    array[1] + array[2]
+*/
 let array = [1,7,4,4,5,2];
 function one(data){
   //let time_start = new Date().getTime();
@@ -44,7 +48,10 @@ function textRun(){
 }
 
 
-/* solution 3*/
+/* solution 3
+  This soultion start looping simultaneously, one from the head and one from the tail end and adds till they meet in the middle
+  one a pair that adds up to 8 is found, it stops.
+*/
 //let time_start = new Date().getTime();
 let arr = [1,2,6,4]
 
