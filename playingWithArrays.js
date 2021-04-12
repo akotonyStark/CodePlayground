@@ -20,3 +20,13 @@ for(let i = 0; i<arr.length; i++){
     }
   }
 }
+
+//looping through inner loop from the tail and outerloop from the head
+for(let i = 0; i<arr.length; i++){
+  for(let j = arr.length-1; j>=0; j--){
+    console.log(arr[i], nums[j])
+    if(arr[i] === nums[j]){
+      console.log(arr[i])
+    }
+  }
+}
