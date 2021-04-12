@@ -9,5 +9,4 @@ let factorial = (n) => {
       }
       return fact
     }
-    //return n*(n-1)
 }
