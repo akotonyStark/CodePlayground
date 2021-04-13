@@ -10,3 +10,21 @@ function compareArrays(arr1,arr2){
 }
 
 compareArrays([1,2,3],[1,2,3])
+
+/*solution 2*/
+function compareArrays(arr1,arr2){
+  let result = false
+  if(arr1.length !== arr2.length){
+    result = false
+  }
+  else{
+    for(let i = 0; i<arr1.length; i++){
+      if(arr1[i] === arr2[i]){
+        result = true
+      }
+    }
+  }
+  return result
+}
+
+console.log(compareArrays([1,2,3],[1,2,3]))
