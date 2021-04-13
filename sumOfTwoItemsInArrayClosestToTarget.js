@@ -3,12 +3,13 @@ let arr2 = [4,1,2,10,5,20]
 
 //solution 1 - brute force
 
-let loops = 0
+let loops = 0, target = 24
 for(let i = 0; i<arr1.length; i++){
   for(let j = 0; j<arr2.length; j++){
     //console.log(arr1[i] + arr2[j])
+    let sum = arr1[i] + arr2[j]
     loops++
-    if(arr1[i] + arr2[j] === 24-1 || arr1[i] + arr2[j] === 24+1){
+   if(sum === target || sum === target-1 || sum === target+1){
       console.log(arr1[i], arr2[j])
       break;
     }
@@ -29,9 +30,10 @@ console.log(s2)
 
 for(let i = 0; i<s1.length; i++){
   for(let j = s2.length-1; j>0; j--){
+    let sum = arr1[i] + arr2[j]
     loops++
     //console.log(arr1[i] + arr2[j])
-    if(arr1[i] + arr2[j] === 24-1 || arr1[i] + arr2[j] === 24+1){
+    if(sum === target || sum === target-1 || sum === target+1){
       console.log(arr1[i], arr2[j])
       break;
     }
