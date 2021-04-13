@@ -15,3 +15,18 @@ function fibo(n){
 }
 
 console.log(fibo(6))
+
+
+//getting the nth fibo number
+function getNthFibo(n){
+  if (n <= 1){
+    return n; 
+  }
+  else{
+   return getNthFibo(n-1) + getNthFibo(n-2);
+  }    
+    
+  
+}
+
+console.log(getNthFibo(7))
