@@ -14,3 +14,10 @@ for(let i = 0; i<arr1.length; i++){
     }
   }
 }console.log("Took us", loops, "loops to find")
+
+
+/* solution 2 
+this approach sorts the arrays first, then loops from the head in one and the tail in the other
+this is because it is more likely to get closer to the sum if the smallest and biggest elements in the arr are paired
+*/
+
