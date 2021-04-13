@@ -30,3 +30,7 @@ function getNthFibo(n){
 }
 
 console.log(getNthFibo(7))
+
+
+//you can also get the nth element by using the previous function
+//but returning f[n] instead of f
