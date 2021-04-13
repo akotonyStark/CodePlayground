@@ -1,18 +1,20 @@
-
 function fibo(n){
-  let f = []; 
-        let i;
-        /* 0th and 1st number of the series are 0 and 1*/
-        f[0] = 0;
-        f[1] = 1;
-        for (i = 2; i <= n; i++)
-        {
-            /* Add the previous 2 numbers in the series
-            and store it */
-            f[i] = f[i-1] + f[i-2];
-        }
-        return f;
+  //declare an empty array
+  let arr = []
+
+  //fix first and second positions with a value
+  arr[0] = 0
+  arr[1] = 1
+
+  for(let i=2; i<=n; i++){
+    //add previous two to make current
+    arr[i] = arr[i-1] + arr[i-2]
+  }
+
+  return arr
 }
+
+console.log(fibo(4))
 
 console.log(fibo(6))
 
