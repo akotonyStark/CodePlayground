@@ -22,9 +22,15 @@ function compareArrays(arr1,arr2){
       if(arr1[i] === arr2[i]){
         result = true
       }
+      else{
+        result = false
+      }
     }
   }
   return result
 }
 
-console.log(compareArrays([1,2,3],[1,2,3]))
+console.log(compareArrays([1,2,3],[1,2,4]))
+
+/* solution 3 */
+
