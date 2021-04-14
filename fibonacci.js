@@ -19,6 +19,8 @@ console.log(fibo(4))
 console.log(fibo(6))
 
 
+
+
 //getting the nth fibo number
 function getNthFibo(n){
   if (n <= 1){
@@ -33,6 +35,12 @@ function getNthFibo(n){
 
 console.log(getNthFibo(7))
 
-
 //you can also get the nth element by using the previous function
 //but returning f[n] instead of f
+
+//to display the series of fibonacci numbers
+let temp = []
+for(let i=0; i<10; i++){
+  temp.push(getNthFibo(i))
+}
+console.log(temp)
