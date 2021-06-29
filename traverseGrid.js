@@ -1,4 +1,4 @@
-function traverseGrid(grid, start){
+const traverseGrid = (grid, start) => {
   let column = start
 
   for(let row = 0; row < grid.length; row++){
