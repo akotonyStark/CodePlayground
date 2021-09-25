@@ -6,10 +6,10 @@ const traverseGrid = (grid, start) => {
     if(grid[row][column] === 1){
       //check if end of the row has been reached
       if(column < grid[row].length){
-        return false
+        return -1
       }
       if(grid[row][column + 1] === 0){
-        return false
+        return -1
       }
       column++
 
@@ -17,10 +17,10 @@ const traverseGrid = (grid, start) => {
       //movement to the left
     else{
       if(column === 0){
-        return false
+        return -1
       }
       if(grid[row][column - 1] === 1){
-        return false
+        return -1
       }
       column--
     }
