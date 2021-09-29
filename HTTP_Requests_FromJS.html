@@ -1,0 +1,16 @@
+<h2>HTTP Requests</h2>
+
+<script>
+  const request = new XMLHttpRequest()
+
+  request.addEventListener('readystatechange', (e) => {
+    if (e.target.readyState === 4 && e.target.status === 200) {
+      const data = JSON.parse(e.target.responseText)
+      console.log(data)
+    } else if (e.target.readyState === 4) {
+      console.log('Error 400')
+    }
+  })
+  request.open('GET', 'https://puzzle.mead.io/puzzle?wordCountt=2')
+  request.send()
+</script>
