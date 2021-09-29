@@ -14,7 +14,7 @@
   // request.open('GET', 'https://puzzle.mead.io/puzzle?wordCountt=2')
   // request.send()
 
-  //using callbacks - async
+  //using callbacks - async - allows you to do other things while call is being run in the background
   const getPuzzle = (callback) => {
     const request = new XMLHttpRequest()
 
@@ -30,12 +30,12 @@
     request.send()
   }
 
-  // getPuzzle((error, puzzle) => {
-  //   if (error) {
-  //     console.log(error)
-  //   }
-  //   console.log(puzzle)
-  // })
+  getPuzzle((error, puzzle) => {
+    if (error) {
+      console.log(error)
+    }
+    console.log(puzzle)
+  })
 
   //sychronous call
   const getPuzzleSync = () => {
