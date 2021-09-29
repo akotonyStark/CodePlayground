@@ -1,16 +1,39 @@
 <h2>HTTP Requests</h2>
 
 <script>
-  const request = new XMLHttpRequest()
+  // const request = new XMLHttpRequest()
 
-  request.addEventListener('readystatechange', (e) => {
-    if (e.target.readyState === 4 && e.target.status === 200) {
-      const data = JSON.parse(e.target.responseText)
-      console.log(data)
-    } else if (e.target.readyState === 4) {
-      console.log('Error 400')
+  // request.addEventListener('readystatechange', (e) => {
+  //   if (e.target.readyState === 4 && e.target.status === 200) {
+  //     const data = JSON.parse(e.target.responseText)
+  //     console.log(data)
+  //   } else if (e.target.readyState === 4) {
+  //     console.log('Error 400')
+  //   }
+  // })
+  // request.open('GET', 'https://puzzle.mead.io/puzzle?wordCountt=2')
+  // request.send()
+
+  //using callbacks
+  const getPuzzle = (callback) => {
+    const request = new XMLHttpRequest()
+
+    request.addEventListener('readystatechange', (e) => {
+      if (e.target.readyState === 4 && e.target.status === 200) {
+        const data = JSON.parse(e.target.responseText)
+        callback(undefined, data.puzzle)
+      } else if (e.target.readyState === 4) {
+        callback('Error 400', undefined)
+      }
+    })
+    request.open('GET', 'https://puzzle.mead.io/puzzle?wordCount=2')
+    request.send()
+  }
+
+  getPuzzle((error, puzzle) => {
+    if (error) {
+      console.log(error)
     }
+    console.log(puzzle)
   })
-  request.open('GET', 'https://puzzle.mead.io/puzzle?wordCountt=2')
-  request.send()
 </script>
