@@ -1,0 +1,13 @@
+<h2>HTTP Requests</h2>
+
+<script>
+  const request = new XMLHttpRequest()
+
+  request.addEventListener('readystatechange', (e) => {
+    if (e.target.readyState === 4) {
+      console.log(e.target)
+    }
+  })
+  request.open('GET', 'https://puzzle.mead.io/puzzle')
+  request.send()
+</script>
