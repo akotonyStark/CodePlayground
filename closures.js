@@ -3,7 +3,10 @@ const myFunction = () => {
   const printMessage = () => {
     console.log(message)
   }
-  printMessage()
+  return printMessage
 }
 
-myFunction() //prints - this is my message
+const myPrintMessage = myFunction()
+
+myPrintMessage() // This is my message
+
