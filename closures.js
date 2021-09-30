@@ -48,3 +48,14 @@ const add_100 = createAdder(100)
 console.log(add_100(-50))
 
 
+const createTipper = (baseTip) => {
+  return (amount) => {
+    return baseTip * amount
+  }
+}
+
+const tip20 = createTipper(0.2)
+
+console.log(tip20(100))
+
+
