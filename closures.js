@@ -35,3 +35,16 @@ counter.increment()
 
 console.log(counter.get())
 
+const createAdder = (a) => {
+  return (b) => {
+    return a + b
+  }
+}
+
+const add_10 = createAdder(10)
+console.log(add_10(5))
+
+const add_100 = createAdder(100)
+console.log(add_100(-50))
+
+
