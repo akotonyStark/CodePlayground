@@ -65,12 +65,10 @@
 
     if (request.readyState === 4) {
       const data = JSON.parse(request.responseText)
-      return data
+      console.log(data)
     }
   }
 
-  setTimeout(() => {
-    const products = getData()
-    console.log(products)
-  }, 4000)
-</script>
+    const data = getData()
+    console.log(data)
+
