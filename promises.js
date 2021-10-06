@@ -23,10 +23,7 @@ myPromise
   )
   .catch((e) => console.log(e))
 
-// const result = fetch('https://www.mocky.io/v2/5c3e15e63500006e003e9795')
-// const data = result.json()
 
-// console.log(data)
 
 const getData = () => {
   const request = new XMLHttpRequest()
