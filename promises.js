@@ -1,7 +1,7 @@
 const getDataCallback = (callback) => {
   setTimeout(() => {
     console.log('Timer up')
-  }, 2000)
+  }, 3000)
 }
 
 //a promis
