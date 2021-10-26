@@ -19,5 +19,19 @@ const items = [
 
 //items.forEach(item => console.log(item))
 
-const totalPrice = items.reduce((total, item) => total + item.price, 0)
-console.log(totalPrice)
+// const totalPrice = items.reduce((total, item) => total + item.price, 0)
+// console.log(totalPrice)
+
+// const hasSomeCheapItems = items.some(item => item.price < 100)
+// console.log(hasSomeCheapItems) //returns true
+
+// const allCheapItems = items.every(item => item.price < 100)
+// console.log(allCheapItems) //returns false
+
+ const numbers = [1,2,3,4,5,6,7,9]
+ console.log(numbers.includes(11))
+
+
+
+
+
