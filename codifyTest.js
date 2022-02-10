@@ -23,6 +23,39 @@ function solution(arr){
 console.log(solution(arr))
 
 
+/* solution submitted in 2022
+const A = [-1,-3]
+
+
+function solution(A){
+const B = A.sort((a,b) => a-b)
+let smallest  = A[0]
+// console.log(smallest)
+let someNum = 0
+
+if(smallest < 0){
+  return 1
+}
+
+for(let i=0;  i<A.length; i++){
+  if(A.includes(smallest) && A[i]>0){
+  //console.log(smallest)
+  smallest = smallest + 1
+  someNum = smallest
+}else{
+  someNum = smallest
+  
+}
+}
+return someNum
+}
+
+console.log(solution(A))
+
+*/
+
+
+
 // optmized solution above
 let arr =   [1,2,40000]//let arr = [1]//let arr =   [1,2,3] //let arr =   [-1, -3] //let arr = [1,2,40000] //let arr = [-1000000, 1000000]
 
