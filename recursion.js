@@ -1,0 +1,23 @@
+function factorial(num){
+  if(num <= 1){
+    return 1
+  }
+  else{
+    return num * factorial(num-1) 
+  }
+}
+
+
+console.log(factorial(4))
+
+
+function sumRange(num){
+  if(num ===1 ){
+    return 1
+  }
+  else{
+    return num + sumRange(num-1)
+  }
+}
+
+console.log(sumRange(4))
