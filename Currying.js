@@ -1,4 +1,15 @@
+function add(a){
+  return function(b){
+   return function(c){
+     return function(d){
+       return a+b+c+d
+     }
+   }
+  }
+}
 
+
+console.log(add(5)(4)(3)(8))
 //f(a,b,c) => f(a)(b)(c)
 
 const sum = (a,b,c) => {
