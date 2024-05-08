@@ -1,6 +1,5 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
-
 function isAlphaNumeric(str) {
     // Regex to check valid
     // alphanumeric string  
@@ -25,7 +24,7 @@ function isAlphaNumeric(str) {
 function hasEvenNumberOfLetters(str){
     let letters = str.replace(/[^a-zA-Z]/g, '');
 
-    if(letters.length % 2 == 0){
+    if(letters && letters.length % 2 == 0){
         return true
     }
     return false
@@ -33,13 +32,14 @@ function hasEvenNumberOfLetters(str){
 
 function hasOddNuberOfDigits(str){
     let numbers = str.replace(/[^0-9]/g,"");
-    if(numbers.length % 2 != 0){
+    if(numbers && numbers.length % 2 != 0){
         return true
     }
     return false
 }
+
 function solution(S) {
-    // Implement your solution 
+    // Implement your solution here
     let words = S.split(' ')
     let validPasswords = []
     for(let i=0; i<words.length; i++){
@@ -48,9 +48,7 @@ function solution(S) {
         }
     }
     //console.log("Valid", validPasswords)
-    //let arr = [ '5', 'a0A', 'pass007', '?xy1' ]
-
-        let lengths = []
+    let lengths = []
         for(let i=0; i<validPasswords.length; i++){
             lengths.push(validPasswords[i].length)
         }
@@ -59,7 +57,7 @@ function solution(S) {
         let maxLength = Math.max(...lengths)
         //console.log(lengths.indexOf(maxLength))
 
-        let longestPass = validPasswords[lengths.indexOf(maxLength)]
+        //let longestPass = validPasswords[lengths.indexOf(maxLength)]
         //console.log(longestPass)
         return maxLength
 }
